@@ -7,7 +7,7 @@ apt-get update
 apt-get install \
 	unclutter \
     xorg \
-    chromium \
+    firefox-esr \
     openbox \
     lightdm \
     locales \
@@ -55,19 +55,8 @@ unclutter -idle 0.1 -grab -root &
 
 while :
 do
-  chromium \
-    --no-first-run \
-    --start-maximized \
-    --window-position=0,0 \
-    --window-size=1024,768 \
-    --disable \
-    --disable-translate \
-    --disable-infobars \
-    --disable-suggestions-service \
-    --disable-save-password-bubble \
-    --disable-session-crashed-bubble \
-    --incognito \
-    --kiosk "https://neave.tv/"
+  firefox \
+    --kiosk "https://setsuzokustudio.com/"
   sleep 5
 done &
 EOF
